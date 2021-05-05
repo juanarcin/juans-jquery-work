@@ -8,6 +8,9 @@ body, p, li{
 /*  font-family: "Poller One", cursive;
   font-family: "Covered By Your Grace", cursive;*/
 }
+h3{
+	color: #ce4f00;
+}
 nav{
 	position: relative;
 	z-index: 3;
@@ -46,6 +49,10 @@ a.link{
 	text-decoration: none;
 	color:#000;
 }
+#coding-history{
+	font-weight: bold;
+	color: #ce4f00;
+}
 #project-list{
 	padding: 0;
 	margin: 0;
@@ -61,26 +68,34 @@ a.link{
 #project-list li .projectFooter{
 	padding: 5px;
 }
+#project-list li .projectFooter a{
+	text-decoration: none;
+	display:inline-block;
+	margin: 0 5px;
+}
 
 #project-list li .description {
     height: 100px;
 }
 
 ul.skills{
-	margin:0 0 40px;
+	margin:0 0 20px;
 	padding: 0;
 	text-align: center;
 }
 li.filter{
 	display:inline-block;
-	margin: 10px 20px;
+	margin: 0 10px;
+	padding: 0 10px 5px;
 	font-weight: bold;
 	cursor: pointer;
 	color:#9c9c9c;
-	transition: color ease .5s;
+	transition: all ease .5s;
+	border-bottom: 3px solid #fff7e7;
 }
-li.filter.active-filter{
+li.filter.active-filter, li.filter:hover{
 	color:#ce4f00;
+	border-bottom: 3px solid #ce4f00;
 }
 
 li.react{
@@ -98,8 +113,8 @@ li.react .projectFooter{
 li.react .projectFooter a{
 	color: #61dafb;
 }
-li.vanilla h3{
-	color: #9435cf;
+li.react h3{
+	color: #20232a;
 }
 
 
@@ -108,12 +123,12 @@ li.angular{
 	color: #c3002f;
 }
 li.angular .header{
-				background: #358ee1;
-				color: #fff;
+	background: #358ee1;
+	color: #fff;
 }
 li.angular .projectFooter{
-				background: #358ee1;
-				color: #fff;
+	background: #358ee1;
+	color: #fff;
 }
 li.angular .projectFooter a{
 	color: #fff;
@@ -128,20 +143,18 @@ li.jquery{
 	color: #0769ad;
 }
 li.jquery .header{
-				background: #0769ad;
-				color: #fff;
+	background: #0769ad;
+	color: #fff;
 }
 li.jquery .projectFooter{
-				background: #0769ad;
-				color: #78cff5;
+	background: #0769ad;
+	color: #78cff5;
 }
 li.jquery .projectFooter a{
 	color: #78cff5;
 }
-
-
-li.vanilla h3{
-	color: #21759b;
+li.jquery h3{
+	color: #0769ad;
 }
 
 
@@ -155,13 +168,13 @@ li.wordpress .header{
 }
 li.wordpress .projectFooter{
 	background: #21759b;
-	color: #61dafb;
+	color: #fff;
 }
 li.wordpress .projectFooter a{
 	color: #fff;
 }
-li.vanilla h3{
-	color: #9435cf;
+li.wordpress h3{
+	color: #21759b;
 }
 
 
@@ -175,13 +188,40 @@ li.vanilla .header{
 }
 li.vanilla .projectFooter{
 	background: #9435cf;
-	color: #fff;
+	color: #e9dcf1;
 }
 li.vanilla .projectFooter a{
 	color: #e9dcf1;
 }
 li.vanilla h3{
 	color: #9435cf;
+}
+
+.about-text{
+	width: 55%;
+	float:left;
+}
+
+.skill-column{
+	width: 20%;
+	float:left;
+	box-sizing: border-box;
+	padding-left: 10px;
+	margin: 0;
+}
+.skill-column li{
+	list-style: none;
+	color: #ce4f00;
+	font-weight: bold;
+}
+.skill-column li ul{
+	padding-left: 20px;
+}
+.skill-column li ul li{
+	color:#555;
+	font-weight: normal;
+	list-style: square;
+	margin: 5px 0;
 }
 
 @media screen and (min-width: 600px){
