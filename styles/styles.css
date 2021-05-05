@@ -1,0 +1,192 @@
+body{
+	padding: 0;
+	margin: 0;
+	background: #fff7e7;
+}
+body, p, li{
+  font-family: "Raleway", sans-serif;
+/*  font-family: "Poller One", cursive;
+  font-family: "Covered By Your Grace", cursive;*/
+}
+nav{
+	position: relative;
+	z-index: 3;
+}
+.panel{
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	opacity: 0;
+	transition: all ease .5s;
+}
+.panel.active{
+	z-index: 1;
+	opacity: 1;
+}
+content{
+	display:block;
+	margin: 60px auto 0;
+	max-width: 1000px;
+	padding: 15px;
+}
+
+nav ul{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+nav ul li{
+	display: inline-block;
+	margin: 10px 20px;
+}
+a.link{
+	text-decoration: none;
+	color:#000;
+}
+#project-list{
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+#project-list li{
+	display:inline-block;
+	width: 100%;
+	margin: 10px;
+}
+
+#project-list li .header,
+#project-list li .projectFooter{
+	padding: 5px;
+}
+
+#project-list li .description {
+    height: 100px;
+}
+
+ul.skills{
+	margin:0 0 40px;
+	padding: 0;
+	text-align: center;
+}
+li.filter{
+	display:inline-block;
+	margin: 10px 20px;
+	font-weight: bold;
+	cursor: pointer;
+	color:#9c9c9c;
+	transition: color ease .5s;
+}
+li.filter.active-filter{
+	color:#ce4f00;
+}
+
+li.react{
+	background: #61dafb;
+	color: #20232a;
+}
+li.react .header{
+	background: #20232a;
+	color: #61dafb;
+}
+li.react .projectFooter{
+	background: #20232a;
+	color: #61dafb;
+}
+li.react .projectFooter a{
+	color: #61dafb;
+}
+li.vanilla h3{
+	color: #9435cf;
+}
+
+
+li.angular{
+	background: #fff;
+	color: #c3002f;
+}
+li.angular .header{
+				background: #358ee1;
+				color: #fff;
+}
+li.angular .projectFooter{
+				background: #358ee1;
+				color: #fff;
+}
+li.angular .projectFooter a{
+	color: #fff;
+}
+li.vanilla h3{
+	color: #c3002f;
+}
+
+
+li.jquery{
+	background: #78cff5;
+	color: #0769ad;
+}
+li.jquery .header{
+				background: #0769ad;
+				color: #fff;
+}
+li.jquery .projectFooter{
+				background: #0769ad;
+				color: #78cff5;
+}
+li.jquery .projectFooter a{
+	color: #78cff5;
+}
+
+
+li.vanilla h3{
+	color: #21759b;
+}
+
+
+li.wordpress{
+	background: #fff;
+	color: #20232a;
+}
+li.wordpress .header{
+	background: #21759b;
+	color: #fff;
+}
+li.wordpress .projectFooter{
+	background: #21759b;
+	color: #61dafb;
+}
+li.wordpress .projectFooter a{
+	color: #fff;
+}
+li.vanilla h3{
+	color: #9435cf;
+}
+
+
+li.vanilla{
+	color: #9435cf;
+	background:#e9dcf1;
+}
+li.vanilla .header{
+	background: #9435cf;
+	color: #fff;
+}
+li.vanilla .projectFooter{
+	background: #9435cf;
+	color: #fff;
+}
+li.vanilla .projectFooter a{
+	color: #e9dcf1;
+}
+li.vanilla h3{
+	color: #9435cf;
+}
+
+@media screen and (min-width: 600px){
+	#project-list li{
+		width: 250px;
+	}
+}
+
