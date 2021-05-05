@@ -62,7 +62,31 @@ $('.filter').click(function(){
 	$('.active-filter').removeClass('active-filter');
 	$(this).addClass('active-filter');
 	activeFilter = $(this).data('show')
-	$('#project-list li').fadeOut('fast').delay(500)
+	$('#project-list li').fadeOut('fast').delay(300)
 	fadeInActiveTag(activeFilter)
-
 })
+
+// set coding history (about page)
+function setCodingHistory(){
+
+	// To set two dates to two variables
+	let startDate = new Date("10/15/2009");
+	let today = new Date();
+
+	// To calculate the time difference of two dates
+	let differenceInTime = today.getTime() - startDate.getTime();
+
+	// To calculate the no. of days between two dates
+	let numberOfDays = Math.ceil(differenceInTime / (1000 * 3600 * 24));
+
+	let years = Math.floor(numberOfDays / 365);
+	let months = Math.floor(numberOfDays % 365 / 30);
+	let days = Math.floor(numberOfDays % 365 % 30);
+
+	let yearsDisplay = years > 0 ? years + (years === 1 ? " year, " : " years, ") : "";
+	let monthsDisplay = months > 0 ? months + (months === 1 ? " month, " : " months, ") : "";
+	let daysDisplay = days > 0 ? days + (days === 1 ? " day" : " days") : "";
+	let amountOfTime = `${yearsDisplay} ${monthsDisplay} and  ${daysDisplay}`; 
+	$('#coding-history').html(amountOfTime)
+}
+setCodingHistory();
