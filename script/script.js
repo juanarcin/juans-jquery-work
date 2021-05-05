@@ -89,4 +89,18 @@ function setCodingHistory(){
 	let amountOfTime = `${yearsDisplay} ${monthsDisplay} and  ${daysDisplay}`; 
 	$('#coding-history').html(amountOfTime)
 }
+
+function fadeInText(){
+  setTimeout(function () {
+		$('.hidden-text').addClass('bringIn')
+  }, 4000);
+}
+function animateHomePage(){
+	$('#hi').addClass('bringIn')
+  setTimeout(function () {
+		$('video').addClass('bringIn')
+  }, 3000);
+  fadeInText()
+}
 setCodingHistory();
+animateHomePage();

@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
+	<!-- <div id="black-screen"></div> -->
 	<nav>
 		<ul>
 			<li><a href="#" class="link" data-page="home">home</a></li>
@@ -17,8 +18,25 @@
 			<li><a href="#" class="link" data-page="contact">contact</a></li>
 		</ul>
 	</nav>
-	<section class="panel" id="home">Home</section>
-	<section class="panel active" id="about">
+	<section class="panel active" id="home">
+		
+		<div class="home-page">
+			<div class="intro">
+				<h2 id="hi">Hello</h2>
+				<p>I'm Juan Arciniega.
+				<span class="hidden-text">I build websites with love <i class="fa fa-heart" aria-hidden="true"></i></span></p>
+			</div>
+			<div class="video-background">
+				<div class="video-overlay bringIn"></div>
+				<div class="video-foreground">
+					<video playsinline="" autoplay="" muted="" loop="" id="bgvid">
+						<source src="https://www.juans.work/shared/background.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="panel" id="about">
 		<content>
 			<div class="about-text">
 				<h3>Hi There!</h3>
@@ -43,9 +61,8 @@
 						<li class="skill" data-skill-type="layout">CSS3</li>
 						<li class="skill" data-skill-type="layout">FlexBox</li>
 						<li class="skill" data-skill-type="layout">HTML5</li>
-						<li class="skill" data-skill-type="layout">Less</li>
+						<li class="skill" data-skill-type="layout">Less/Sass</li>
 						<li class="skill" data-skill-type="layout">Responsive Design</li>
-						<li class="skill" data-skill-type="layout">Sass</li>
 						<li class="skill" data-skill-type="layout">Zurb Foundation</li>
 					</ul>
 				</li>
@@ -61,8 +78,8 @@
 			<ul class="skill-column">
 				<li>themes
 					<ul>
-						<li class="skill" data-skill-type="themes">Shopify Custom Themes</li>
-						<li class="skill" data-skill-type="themes">WordPress Custom Themes</li>
+						<li class="skill" data-skill-type="themes">Shopify Themes</li>
+						<li class="skill" data-skill-type="themes">WordPress Themes</li>
 					</ul>
 				</li>
 				<li>build
@@ -84,7 +101,7 @@
 						<li class="skill" data-skill-type="design">Photoshop</li>
 					</ul>
 				</li>
-				<li>extra
+				<li>other
 					<ul>
 						<li class="skill" data-skill-type="extra">API</li>
 						<li class="skill" data-skill-type="extra">MVC</li>
