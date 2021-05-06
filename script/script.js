@@ -41,8 +41,14 @@ fetch('https://juans.work/shared/data.json')
 // set nav functionality
 $('.link').click(function(){
 	let page = $(this).data('page');
-	$('.active').removeClass('active')
-	$(`#${page}`).addClass('active')
+	if(page != 'contact'){
+		// switch page
+		$('.active').removeClass('active')
+		$(`#${page}`).addClass('active')
+		//upfdate nav
+		$('.active-page').removeClass('active-page');
+		$(this).addClass('active-page')
+	}
 })
 
 // set work filter funcitonality
@@ -90,6 +96,14 @@ function setCodingHistory(){
 	$('#coding-history').html(amountOfTime)
 }
 
+// contact modal
+$('a[data-page="contact"').click(function(){
+	$('.contact-modal').fadeIn();
+})
+$('#close-modal').click(function(){
+	$('.contact-modal').fadeOut();
+})
+
 function fadeInText(){
   setTimeout(function () {
 		$('.hidden-text').addClass('bringIn')
@@ -104,3 +118,4 @@ function animateHomePage(){
 }
 setCodingHistory();
 animateHomePage();
+
