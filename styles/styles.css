@@ -24,10 +24,13 @@ nav{
 	z-index: 0;
 	opacity: 0;
 	transition: all ease .5s;
+	overflow: hidden;
 }
 .panel.active{
 	z-index: 1;
 	opacity: 1;
+	height: auto;
+	min-height: 100vh;
 }
 content{
 	display:block;
@@ -47,7 +50,13 @@ nav ul li{
 }
 a.link{
 	text-decoration: none;
-	color:#000;
+	color:#777;
+	transition: all ease .5s;
+	font-weight: bold;
+}
+a.link:hover, a.link.active-page{
+	color: #ce4f00;
+	border-bottom: ;
 }
 
 /*homepage animations*/
@@ -115,7 +124,7 @@ a.link{
 #project-list li{
 	display:inline-block;
 	width: 100%;
-	margin: 10px;
+	margin: 10px 0;
 }
 
 #project-list li .header,
@@ -174,7 +183,7 @@ li.react h3{
 
 li.angular{
 	background: #fff;
-	color: #c3002f;
+	color: #ce4f00;
 }
 li.angular .header{
 	background: #358ee1;
@@ -252,12 +261,12 @@ li.vanilla h3{
 }
 
 .about-text{
-	width: 55%;
+	width: 100%;
 	float:left;
 }
 
 .skill-column{
-	width: 20%;
+	width: 45%;
 	float:left;
 	box-sizing: border-box;
 	padding-left: 10px;
@@ -302,6 +311,52 @@ video.bringIn{
 	opacity: 1;
 }
 
+.contact-modal{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,.8);
+	z-index: 10;
+	display:none;
+}
+.contact-modal .content{
+	background: #fff;
+	width: 90%;
+	max-width: 600px;
+	margin: 50px auto;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 26px;
+	border-radius: 20px;
+	color:#555;
+	font-weight: bold;
+}
+#close-modal{
+	float: right;
+	text-decoration: none;
+	color:#ff946c;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer;
+	transition: all ease .3s;
+}
+#close-modal:hover{
+	color:#f95719;
+}
+.contact-modal .content a{
+	display:block;
+	margin-top: 20px;
+	text-decoration: none;
+	color:#555;
+	transition: all ease .5s;
+}
+.contact-modal .content a:hover{
+	color:#000;
+
+}
+
 @media screen and (min-width: 600px){
 	#project-list li{
 		width: 250px;
@@ -313,14 +368,20 @@ video.bringIn{
 	.hidden-text.bringIn {
     color: #000;
     font-size: 25px;
-}
-.hidden-text {
-    color: #000;
-    font-size: 25px;
-}
-.intro{
-	font-size: 60px;
-	text-align: center;
-}
+	}
+	.hidden-text {
+	    color: #000;
+	    font-size: 25px;
+	}
+	.intro{
+		font-size: 60px;
+		text-align: center;
+	}
+	.skill-column{
+		width: 20%;
+	}
+	.about-text{
+		width: 55%;
+	}
 }
 
